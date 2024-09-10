@@ -11,7 +11,7 @@ st.set_page_config(page_title="Fashion Classifier", page_icon="👚", layout="wi
 # Loading the Keras model
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model("../saved model/1.keras")
+    return tf.keras.models.load_model("../saved_model/1.keras")
 
 MODEL = load_model()
 
