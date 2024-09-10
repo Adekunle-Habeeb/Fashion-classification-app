@@ -5,6 +5,8 @@
 This project is a Streamlit-based web application that uses a deep learning model to classify clothing images into different categories. The app allows users to upload images of clothing or footwear and receive predictions about the category of the item.
 
 ![image](https://github.com/user-attachments/assets/48388c7b-d309-41d1-b9a5-0a7f6d2ee24f)
+![image](https://github.com/user-attachments/assets/9b56c76c-c56c-4ccc-b2b9-8778e54f0164)
+
 
 
 ## Features
