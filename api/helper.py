@@ -147,7 +147,7 @@ import os
 import zipfile
 import matplotlib.pyplot as plt
 
-ZIP_PATH = r"C:\Users\Adekunle Habeeb\Desktop\E-commerce Deep Learning\saved_model\model.zip"
+ZIP_PATH = "../saved_model/model.zip"
 
 EXTRACT_PATH = "./static/saved_model/"
 MODEL_PATH = os.path.join(EXTRACT_PATH, "1.keras")
@@ -177,7 +177,7 @@ def load_model():
             return None
 
         # Attempt to load the model
-        st.info(f"Loading model from {MODEL_PATH}...")
+        # st.info(f"Loading model from {MODEL_PATH}...")
         model = tf.keras.models.load_model(MODEL_PATH)
         return model
 
