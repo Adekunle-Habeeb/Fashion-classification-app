@@ -4,17 +4,30 @@ from PIL import Image
 import tensorflow as tf
 import matplotlib.pyplot as plt
 import keras as keras
-
+import os
 
 # Streamlit app configuration
 st.set_page_config(page_title="Fashion Classifier", page_icon="👚", layout="wide")
 
 # Loading the Keras model
+# @st.cache_resource
+# def load_model():
+#     return tf.keras.models.load_model("/api/1.keras")
+
+# MODEL = tf.keras.models.load_model("./1.keras")
+
+
+
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model("/api/1.keras")
+    model_path = os.path.join("api", "1.keras")
+    try:
+        return keras.models.load_model(model_path)
+    except FileNotFoundError:
+        st.error(f"Model file not found at {model_path}. Please check if the file exists in the deployed environment.")
+        st.stop()
 
-MODEL = tf.keras.models.load_model("./1.keras")
+MODEL = load_model()
 
 # Class names 
 CLASS_NAMES = ['Boys-Apparel', 'Boys-Footwear', 'Girls-Apparel', 'Girls-Footwear']
