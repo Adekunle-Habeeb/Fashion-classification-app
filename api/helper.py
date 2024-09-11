@@ -147,7 +147,8 @@ import os
 import zipfile
 import matplotlib.pyplot as plt
 
-ZIP_PATH = "C:\Users\Adekunle Habeeb\Desktop\E-commerce Deep Learning\saved_model\model.zip"  # Path to your zip file
+ZIP_PATH = r"C:\Users\Adekunle Habeeb\Desktop\E-commerce Deep Learning\saved_model\model.zip"
+
 EXTRACT_PATH = "./static/saved_model/"
 MODEL_PATH = os.path.join(EXTRACT_PATH, "1.keras")
 
