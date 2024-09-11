@@ -13,7 +13,7 @@ st.set_page_config(page_title="Fashion Classifier", page_icon="👚", layout="wi
 def load_model():
     return tf.keras.models.load_model("/saved_model/1.keras")
 
-MODEL = load_model()
+MODEL = tf.keras.models.load_model("/saved_model/1.keras")
 
 # Class names 
 CLASS_NAMES = ['Boys-Apparel', 'Boys-Footwear', 'Girls-Apparel', 'Girls-Footwear']
